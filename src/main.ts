@@ -46,6 +46,7 @@ import './style.css';
   };
 
   const squareEvent = (e: Event, index: number) => {
+    if(squares[index] !== '') return;
     const squareTarget = e.target as HTMLDivElement;
     squareTarget.classList.add(player);
     squares[index] = player;
